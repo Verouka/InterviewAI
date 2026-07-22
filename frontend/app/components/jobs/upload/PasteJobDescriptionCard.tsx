@@ -1,0 +1,3 @@
+export default function PasteJobDescriptionCard() {
+  return <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6"><div><h2 className="font-semibold text-slate-950">Paste job description</h2><p className="mt-1 text-sm text-slate-500">Prefer to paste text? Include the full posting for the best mock analysis.</p></div><label className="sr-only" htmlFor="job-description">Job description</label><textarea id="job-description" rows={10} placeholder="Paste the complete job description here..." className="mt-5 w-full resize-y rounded-xl border border-slate-200 bg-slate-50/60 px-4 py-3 text-sm leading-6 text-slate-900 outline-none placeholder:text-slate-400 focus:border-violet-400 focus:bg-white focus:ring-4 focus:ring-violet-100" /></section>;
+}
