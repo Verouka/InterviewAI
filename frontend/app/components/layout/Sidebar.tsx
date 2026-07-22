@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 
 const items = [
   { label: "Dashboard", href: "#dashboard" },
-  { label: "Interviews", href: "#interviews" },
+  { label: "Interviews", href: "/jobs" },
   { label: "Resume", href: "/resume" },
   { label: "Progress", href: "#progress" },
   { label: "Settings", href: "#settings" },
@@ -22,7 +22,7 @@ export default function Sidebar() {
       </div>
       <nav className="flex-1 space-y-1 p-4" aria-label="Main navigation">
         {items.map((item) => {
-          const isActive = item.label === "Resume" ? pathname === "/resume" : item.label === "Dashboard" && pathname === "/";
+          const isActive = item.label === "Resume" ? pathname === "/resume" : item.label === "Interviews" ? pathname === "/jobs" : item.label === "Dashboard" && pathname === "/";
           return <Link key={item.label} href={item.href} aria-current={isActive ? "page" : undefined} className={`block rounded-xl px-4 py-3 text-sm font-medium ${isActive ? "bg-indigo-500/15 text-indigo-300" : "text-slate-400 hover:bg-white/5 hover:text-white"}`}>{item.label}</Link>;
         })}
       </nav>
